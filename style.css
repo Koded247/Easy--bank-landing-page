@@ -6,5 +6,20 @@
 
 
 body {
-  background: blue;
+  background: rgb(200, 255, 0);
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.home-btn{
+  display: flex;
+  list-style: none;
+  gap: 2em;
+}
+.home-btn a {
+  text-decoration: none;
 }
