@@ -214,12 +214,7 @@ min-width: 250px;
  object-fit: cover;
  margin: 0 auto;
 
-  /* width: 100%
-  ;
-  object-fit: cover;
-  height: auto;
-  display: block;
-   */
+
 }
 
 
@@ -274,5 +269,5 @@ footer p{
   padding-left: 8rem;
 }
 .footer-btn button{
-  /* margin:0 0 2rem 4rem; */
+  
 }
