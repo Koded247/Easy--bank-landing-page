@@ -22,9 +22,9 @@ Users will be able to:
 
 ### Screenshot (desktop and mobile view)
 
-![desktop](/img/desktop-design.jpg)
+![desktop-view](img/desktop-design.jpg)
 
-![mobile](/img/mobile-design.jpg)
+![mobile-view](img/mobile-design.jpg)
 
 
 ### Links

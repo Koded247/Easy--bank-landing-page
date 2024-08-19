@@ -5,9 +5,9 @@
 }
 
 
-body {
-  /* background: rgb(200, 255, 0); */
-  
+body{
+  font-family: "Public Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 /* NAV BAR SECTION */
@@ -18,11 +18,13 @@ body {
   height: 5rem;
   background:white;
   align-items: center;
-  position: static;
+  position:fixed;
   left: 0;
   right: 0;
   top: 0;
-  /* z-index: 10; */
+  z-index: 2;
+  
+  
 }
 
 
@@ -30,10 +32,35 @@ body {
   display: flex;
   list-style: none;
   gap: 2em;
+  
 }
+
 .home-btn a {
   text-decoration: none;
+  position: relative;
+  transition: color .4s;
+  color: hsl(233, 8%, 62%);
 }
+
+.home-btn a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: green;
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  transition: width .3s;
+
+}
+.home-btn a:hover{
+  color: green;
+
+}
+.home-btn a:hover::after {
+  width: 100%;
+}
+
 
 .request-btn{
 background: linear-gradient(117deg,hsl(136, 65%, 51%)0%, hsl(192, 70%, 51%)100%);
@@ -41,9 +68,19 @@ border: none;
 padding:1rem 2rem;
 border-radius: 2rem;
 color: white;
+margin-right: 1.5rem;
 }
 
-/* FIRST SECTION */
+.request-btn:hover{
+  background: linear-gradient(117deg,hsl(136, 65%, 65%)0%, hsl(192, 70%, 65%)100%); 
+}
+
+
+
+
+
+
+              /* FIRST SECTION */
 
 
 
@@ -53,42 +90,86 @@ justify-content: space-between;
 align-items: center;
 background: hsl(0, 0%, 98%);
 
+
 }
 
 
 
 .intro-text {
- padding-left: 10rem;
+ padding-left: 10rem ;
+ padding-right: 6rem;
 
 }
 
-
-.intro-img {
+.intro-text h1{
+  font-size: 3rem;
+  font-weight:normal;
+  margin-bottom: 2rem;
   
 }
-.intro-image {
-background-image:url(img/bg-intro-desktop.svg);
 
-background-position: left center;
-width: 100%;
-height: 100vh;
-background-size: auto;
-background-repeat: no-repeat; 
-position: relative;
-
-   
+.intro-text p{
+  color: hsl(233, 8%, 62%);
+  margin-bottom: 2rem;
+  
 }
 
-/* SECTION TWO */
+
+.intro-image .mockup-bg img{
+  width: 100%;
+  position: relative;
+  left: 11rem;
+  top: -4rem;
+}
+
+
+
+.intro-image .mockup-img img{
+  position: absolute;
+  z-index: 1;
+  width: 42%;
+  top: -1rem;
+  right: 8rem;
+  margin-right: -13rem;
+}
+
+
+
+
+
+
+             /* SECTION TWO */
 
 .section-two {
   background: hsl(220, 16%, 96%);
   padding: 5rem 10rem;
+  margin-top: -5rem;
 }
 
 .section2-text {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
+
+.section2-text h1{
+  font-size: 2rem;
+  font-weight:normal;
+  margin-bottom: 2rem;
+}
+.section2-text p{
+  color: hsl(233, 8%, 62%);
+  width: 50%;
+}
+
+.card-preview p{
+  color: hsl(233, 8%, 62%);
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  width: 73%;
+  margin-top: 1rem;
+}
+
+
+
 
 
 .card-preview{
@@ -98,10 +179,14 @@ position: relative;
   width: 100%;
   
 }
-.card {
-  padding: 1rem;
+.card h3{
+  margin-top: 2rem;
+  font-weight:500;
+
 }
 
+
+           /* SECTION THREE */
 
 .section-three {
   background: hsl(0, 0%, 98%);
@@ -117,20 +202,24 @@ position: relative;
   grid-template-columns: repeat(4 , 1fr);
   min-width:200px ;
   max-height: 150px;
-  gap: 2rem;
+  gap: 1rem;
   
 
 }
 
 .art-card img {
-  max-width: 100%;
-  min-width: 300px;
-  width: 100%
+  
+min-width: 250px;
+ max-height:150px ;
+ object-fit: cover;
+ margin: 0 auto;
+
+  /* width: 100%
   ;
   object-fit: cover;
   height: auto;
   display: block;
-  margin: 0 auto;
+   */
 }
 
 
@@ -182,8 +271,8 @@ footer p{
 }
 
 .footer-btn {
-  padding-left: 10rem;
+  padding-left: 8rem;
 }
 .footer-btn button{
-  margin:0 0 2rem 4rem;
+  /* margin:0 0 2rem 4rem; */
 }
